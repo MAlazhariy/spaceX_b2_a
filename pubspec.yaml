@@ -1,0 +1,60 @@
+name: spacex
+description: "Space-X Flutter mentorship project."
+publish_to: 'none'
+version: 0.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  dio: ^5.4.2+1
+  shared_preferences: ^2.2.2
+  equatable: ^2.0.5
+  get_it: ^7.6.8
+  dartz: ^0.10.1
+  url_launcher: ^6.2.5
+  shimmer: ^3.0.0
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.5
+  easy_localization: ^3.0.5
+#  connection_wrapper:
+  flutter_animate: ^4.5.0
+  share_plus: ^8.0.2
+  # Code generator.
+  build_runner:
+# Code generation for immutable classes (cubit & retrofit).
+  freezed:
+  freezed_annotation:
+# Classes and helper functions that support JSON code generation.
+  json_annotation:
+  json_serializable:
+# UI
+  flutter_screenutil:
+  cached_network_image:
+  flutter_svg:
+  lottie:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/translations/
+    - assets/images/
+
+
+  fonts:
+    - family: Baloo
+      fonts:
+        - asset: assets/fonts/baloo/BalooBhaijaan2-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/baloo/BalooBhaijaan2-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/baloo/BalooBhaijaan2-Bold.ttf
+          weight: 700
