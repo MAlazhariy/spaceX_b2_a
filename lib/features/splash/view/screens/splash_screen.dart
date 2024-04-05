@@ -18,14 +18,14 @@ class _SplashScreenState extends State<SplashScreen> {
     // if (context.read<SettingsCubit>().isFirstLaunch()) {
     //   return pushAndFinish(context, const OnBoardingScreen());
     // }
-
-    context.read<SettingsCubit>().close();
+    //
+    // context.read<SettingsCubit>().close();
     pushAndFinish(context, const DashboardScreen());
   }
 
   Future<void> _delayNavigate(BuildContext context) async {
     if (!mounted) return;
-    return await Future.delayed(const Duration(milliseconds: 5000), () => _navigate(context));
+    return await Future.delayed(const Duration(milliseconds: 1000), () => _navigate(context));
   }
 
   @override
