@@ -13,8 +13,7 @@ class AppConstants {
 
 
   // Strings
-  // todo: enter constant appName
-  static const String APP_NAME = '';
+  static const String APP_NAME = 'SpaceX';
 
   // Shared preferences keys
   static const String TOKEN = '/token';
