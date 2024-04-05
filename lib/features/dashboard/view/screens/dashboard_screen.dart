@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spacex/features/dashboard/view/cubit/dashboard_cubit.dart';
+import 'package:spacex/features/home/view/screens/home_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({
@@ -16,6 +17,9 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   final List<Widget> _screens = [
     // todo: dashboard screens here
+    const HomeScreen(),
+    const HomeScreen(),
+    const HomeScreen(),
   ];
 
   @override
