@@ -1,6 +1,6 @@
 # template
 
-line edited form local.
+line updated from GitHub2
 
 A new Flutter project.
 
