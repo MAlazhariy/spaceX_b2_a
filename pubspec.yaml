@@ -20,18 +20,18 @@ dependencies:
   bloc: ^8.1.4
   flutter_bloc: ^8.1.5
   easy_localization: ^3.0.5
-#  connection_wrapper:
+  #  connection_wrapper:
   flutter_animate: ^4.5.0
   share_plus: ^8.0.2
   # Code generator.
   build_runner:
-# Code generation for immutable classes (cubit & retrofit).
+  # Code generation for immutable classes (cubit & retrofit).
   freezed:
   freezed_annotation:
-# Classes and helper functions that support JSON code generation.
+  # Classes and helper functions that support JSON code generation.
   json_annotation:
   json_serializable:
-# UI
+  # UI
   flutter_screenutil:
   cached_network_image:
   flutter_svg:
