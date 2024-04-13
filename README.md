@@ -1,6 +1,6 @@
 # template
 
-line added from GitHub.
+line updated from GitHub.
 
 A new Flutter project.
 
