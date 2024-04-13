@@ -1,7 +1,7 @@
 # template
 
-line updated from GitHub2
-
+line updated from GitHub
+line from device
 A new Flutter project.
 
 ## Getting Started
