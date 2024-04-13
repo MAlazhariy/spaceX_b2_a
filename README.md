@@ -1,10 +1,12 @@
 # template
 
-line added from GitHub.
- line from device
+line updated from GitHub
+line from device
 A new Flutter project.
 
 ## Getting Started
+
+Line added from local
 
 This project is a starting point for a Flutter application.
 
