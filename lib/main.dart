@@ -5,6 +5,8 @@ import 'package:spacex/core/di/dependency_injection.dart';
 import 'package:spacex/core/utils/common/bloc_observer.dart';
 import 'package:spacex/core/utils/common/languages.dart';
 import 'package:spacex/core/utils/common/system_overlay_style.dart';
+import 'package:spacex/features/home/logic/home_bloc.dart';
+import 'package:spacex/features/launches/logic/launch_bloc.dart';
 import 'package:spacex/my_app.dart';
 import 'package:flutter/material.dart';
 
@@ -25,11 +27,17 @@ void main() async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
   runApp(
-    EasyLocalization(
-      supportedLocales: Language.locales,
-      path: 'assets/translations',
-      fallbackLocale: const Locale('en'),
-      child: const MyApp(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (_) => sl<HomeBloc>()),
+        // todo: add the other Blocs here by yourself
+      ],
+      child: EasyLocalization(
+        supportedLocales: Language.locales,
+        path: 'assets/translations',
+        fallbackLocale: const Locale('en'),
+        child: const MyApp(),
+      ),
     ),
   );
 }
