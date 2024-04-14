@@ -1,6 +1,6 @@
 // import 'dart:convert';
 //
-// import 'package:djibouti_press/view/screens/home/home_screen.dart';
+// import 'package:djibouti_press/view/screens/home/launches_screen.dart';
 // import 'package:fluro/fluro.dart';
 // import 'package:djibouti_press/view/base/screen_not_found.dart';
 // import 'package:djibouti_press/utils/routes.dart';

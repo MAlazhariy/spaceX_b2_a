@@ -6,10 +6,9 @@ final navigatorKey = GlobalKey<NavigatorState>();
 
 class AppConstants {
   // URI
-  static const String ROOT = '';
-  static const String BASE_URL = '$ROOT/api';
+  static const String BASE_URL = 'https://api.spacexdata.com/v4';
 
-  static const String LOGIN = '/auth/login';
+  static const String ROCKETS = '/rocket';
 
 
   // Strings
