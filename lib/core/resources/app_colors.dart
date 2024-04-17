@@ -3,17 +3,14 @@ import 'package:flutter/material.dart';
 // Brand Colors
 const kMainColor = Color(0xff0b0b0b);
 const kSecondaryColor = Color(0xff1B1A40);
-const kPrimaryLightColor = Color(0xffE5EDF0);
+const kPrimaryLightColor = Color(0xffFAF7FF);
 
 // Text Colors
-const kPrimaryTitleColor = Color(0xFF0A0606);
-const kTitleHeadColor = Color(0xFF404040);
-const kTitleBodyColor = Color(0xFF828282);
-const kTitleBodyLightColor = Color(0x5C828282);
-const kSubtitleColor = Color(0xffa6a6a6);
-const kTitleGreyColor = Color(0xff8F8F8F);
-const kTitleLightColor = kBorderOverlayColor;
-const kTitleDarkColor = Color(0xFF2B2B2B);
+const kPrimaryTitleColor = Color(0xffffffff);
+const kTitleBodyColor = Color(0xfffafafc);
+const kTitleHeadColor = Color(0xffebebf2);
+const kTitleHintColor = Color(0xff3d3d3d);
+const kSubtitleColor = Color(0xffd8d8f0);
 
 // Custom Colors
 const kBorderColor = Color(0xfff0f0f0);
@@ -23,10 +20,11 @@ const kStrokeColor = Color(0xFF828282);
 const kShadowColor = Color(0xFFF0F0F0);
 /// link
 const kLightGreyColor = Color(0xFFE8E8E8);
-const kGreyColor = Color(0xFFEDEDED);
+const kGreyColor = Color(0xFFBBBBBB);
 
 // Background Colors
-const kBackgroundColor = Color(0xff1a1a1a);
+const kBackgroundColor = Color(0xff08071a); // #373737
+const kSkyBackgroundColor = Color(0xff08071a);
 
 // Shimmer Colors
 final shimmerBaseColor = kLightGreyColor.withOpacity(0.23);
@@ -38,6 +36,7 @@ const kRedColor = Color(0xFFFF5C68);
 const kGreenColor = Color(0xff6FD39A);
 const kYellowOverlayColor = Color(0xffEFD01D);
 const kBlueOverlayColor = Color(0xff1C72E3);
+const kVioletOverlayColor = Color(0xff8685EF);
 
 // Secondary Colors
 const kSecondaryLightBlueColor = Color(0xffE8F3F8);
