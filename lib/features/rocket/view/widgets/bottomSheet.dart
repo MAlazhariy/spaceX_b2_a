@@ -1,6 +1,7 @@
 // todo: zak - file naming convention `snake_case` + Expressive name.
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 // todo: zak - bad way to import
 //  see this discussion on GitHub to know the reason
@@ -22,26 +23,17 @@ void showBottomSheett(BuildContext context, {required rocketModel rocket}) {
         onTap: () {
           Navigator.pop(context);
         },
-        // todo: zak - why using Container?
-        // Could you use something better?
         child: Container(
           height: 1300,
           child: ListView(
 
             children: <Widget>[
-              // todo: why did you use this operator `!`?
-              // todo: make the variables non-nullable.
-              // هو كل ما تستعمل المتغير هتكتب قدامه العلامة دي !
-              // طالما هتستخدمها كل مرة أمال عملت المتغير nullable ليه؟
               Image.network(rocket.img!),
               Text(rocket.name!),
               Text(rocket.description!,style: TextStyle(fontSize: 25),),
-              // todo: what if the cost is null?
+              if(rocket.cost != null)
               Text('Cost: ${rocket.cost}',style: TextStyle(fontSize: 25),),
-              // todo: what if the var is null?
-              // todo: what is the main functionality of this variable `wikipedia`?
-              // لو اهتميت بتسمية المتغير صح هتقدر بسهولة تميز انه رابط المفروض يفتح للمستخدم مش نص يتعرض
-              Text(rocket.wikipedia!,style: TextStyle(fontSize: 25),),
+              Text(rocket.wikipediaUrl!,style: TextStyle(fontSize: 25),),
             ],
           ),
         ),
