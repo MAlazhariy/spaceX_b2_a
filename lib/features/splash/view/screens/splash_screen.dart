@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:spacex/core/resources/app_images.dart';
 import 'package:spacex/core/utils/common/system_overlay_style.dart';
 import 'package:spacex/core/utils/helpers/navigation/push_and_finish.dart';
+import 'package:spacex/features/home/view/screens/home_screen.dart';
 import 'package:spacex/features/rocket/view/screens/rockets_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,12 +26,13 @@ class _SplashScreenState extends State<SplashScreen> {
     // context.read<SettingsCubit>().close();
     /**/
     // pushAndFinish(context, const RocketsScreen());
-    pushAndFinish(context, const DashboardScreen());
+    pushAndFinish(context, const HomeScreen());
+    // pushAndFinish(context, const DashboardScreen());
   }
 
   Future<void> _delayNavigate(BuildContext context) async {
     if (!mounted) return;
-    return await Future.delayed(const Duration(milliseconds: 6000), () => _navigate(context));
+    return await Future.delayed(const Duration(milliseconds: 6800), () => _navigate(context));
   }
 
   @override
@@ -50,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
               AppLottie.splashBackground,
               height: double.infinity,
               width: double.infinity,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
             ),
             // logo
             Column(
@@ -61,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: Colors.white,
                   width: 260,
                   fit: BoxFit.fill,
-                ).animate(delay: 1.7.seconds).fade(duration: 2.seconds).scale(duration: 1.4.seconds),
+                ).animate(delay: 1.7.seconds).fade(duration: 2.seconds).scale(duration: 1.3.seconds),
                 // .shake(
                 //   delay: 1.7.seconds,
                 //   offset: const Offset(1, 0.2),

@@ -51,7 +51,7 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
         leading: const MyBackLeading(),
       ),
       extendBodyBehindAppBar: true,
-      body: MainBackground(
+      body: MainGalaxyBackground(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
