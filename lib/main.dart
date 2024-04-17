@@ -6,12 +6,10 @@ import 'package:spacex/core/utils/common/bloc_observer.dart';
 import 'package:spacex/core/utils/common/languages.dart';
 import 'package:spacex/core/utils/common/system_overlay_style.dart';
 import 'package:spacex/features/home/logic/home_bloc.dart';
-import 'package:spacex/features/launches/logic/launch_bloc.dart';
 import 'package:spacex/my_app.dart';
 import 'package:flutter/material.dart';
 
 import 'features/rocket/logic/rockets_cubit.dart';
-import 'features/rocket/view/screens/rockets_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +39,6 @@ void main() async {
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         child: const MyApp(),
-
       ),
     ),
   );
