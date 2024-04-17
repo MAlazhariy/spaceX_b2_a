@@ -6,7 +6,7 @@ sealed class RocketsState {}
 final class RocketsInitial extends RocketsState {}
 
 class RocketsLoaded extends RocketsState {
-  final List<rocketModel> rockets;
+  final List<RocketModel> rockets;
 
   RocketsLoaded(this.rockets);
 }

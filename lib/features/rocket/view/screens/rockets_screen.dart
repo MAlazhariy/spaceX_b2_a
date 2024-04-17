@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spacex/core/widgets/main/main_circular_progress_adaptive.dart';
 
-import '../../../../core/network/models/RocketModel.dart';
+import '../../data/model/rocket_model.dart';
 import '../../logic/rockets_cubit.dart';
-import '../widgets/bottomSheet.dart';
+import '../widgets/show_rocket_details_bottom_sheet.dart';
 
 class RocketsScreen extends StatefulWidget {
   const RocketsScreen({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class RocketsScreen extends StatefulWidget {
 }
 
 class _RocketsScreenState extends State<RocketsScreen> {
-  late List<rocketModel> rockets;
+  late List<RocketModel> rockets;
   @override
   void initState() {
     super.initState();
@@ -51,7 +51,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
 
           return GestureDetector(
             onTap: () {
-              showBottomSheett(context, rocket: rocket);
+              showRocketDetailsBottomSheet(context, rocket: rocket);
             },
             child: Card(
               margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
@@ -66,7 +66,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
                   style: const TextStyle(fontSize: 35),
                 ),
                 //  subtitle: Text(rockets[index].description!.substring(0,43)+"...",style: TextStyle(fontSize: 20),),
-                leading: Image.network(rockets[index].img),
+                leading: Image.network(rockets[index].image),
               ),
             ),
           );

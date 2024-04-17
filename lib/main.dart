@@ -5,6 +5,7 @@ import 'package:spacex/core/di/dependency_injection.dart';
 import 'package:spacex/core/utils/common/bloc_observer.dart';
 import 'package:spacex/core/utils/common/languages.dart';
 import 'package:spacex/core/utils/common/system_overlay_style.dart';
+import 'package:spacex/features/dashboard/view/cubit/dashboard_cubit.dart';
 import 'package:spacex/features/home/logic/home_bloc.dart';
 import 'package:spacex/features/launches/logic/launch_bloc.dart';
 import 'package:spacex/my_app.dart';
@@ -31,6 +32,7 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
+        BlocProvider(create: (_) => sl<DashboardCubit>()),
         BlocProvider(create: (_) => sl<HomeBloc>()),
         BlocProvider(create: (_) => sl<RocketsCubit>()),
         BlocProvider(create: (_) => sl<LaunchBloc>()..add(GetNextLaunchEvent())),

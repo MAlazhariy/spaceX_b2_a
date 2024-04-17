@@ -1,12 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:spacex/core/network/api/Rockets_ApiServes.dart';
+import 'package:spacex/features/dashboard/view/cubit/dashboard_cubit.dart';
+import 'package:spacex/features/rocket/rockets_api_service.dart';
 import 'package:spacex/core/network/api/api_client.dart';
 import 'package:spacex/core/network/api/dio_client.dart';
 import 'package:spacex/core/network/api/interceptor/app_interceptor.dart';
 import 'package:spacex/core/network/api/interceptor/logging_interceptor.dart';
-import 'package:spacex/core/network/repositery/RocketsReposetory.dart';
+import 'package:spacex/features/rocket/data/repository/rockets_repository.dart';
 import 'package:spacex/features/launches/data/data_source/launch_remote_data_source.dart';
 import 'package:spacex/features/launches/data/repository/launch_repository.dart';
 import 'package:spacex/features/launches/logic/launch_bloc.dart';
@@ -26,14 +27,12 @@ abstract class DI {
     sl.registerLazySingleton<BaseLaunchRepository>(() => LaunchRepository(sl()));
 
     // custom
-    sl.registerLazySingleton<RocketsApiServes>(() => RocketsApiServes(sl()));
-    sl.registerLazySingleton<RocketsReposetory>(() => RocketsReposetory(sl()));
+    sl.registerLazySingleton<RocketsApiService>(() => RocketsApiService(sl()));
+    sl.registerLazySingleton<RocketsRepository>(() => RocketsRepository(sl()));
 
     // controller
-    /* todo: add controllers */
+    sl.registerFactory(() => DashboardCubit());
     // sl.registerFactory(() => HomeBloc());
-    // sl.registerFactory(() => LaunchBloc());
-    // sl.registerFactory(() => RocketBloc());
     sl.registerFactory(() => RocketsCubit(sl()));
     sl.registerFactory(() => LaunchBloc(sl()));
 

@@ -1,20 +1,20 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../../core/network/models/RocketModel.dart';
-import '../../../core/network/repositery/RocketsReposetory.dart';
+import '../data/model/rocket_model.dart';
+import '../data/repository/rockets_repository.dart';
 
 
 part 'rockets_state.dart';
 
 class RocketsCubit extends Cubit<RocketsState> {
-  final RocketsReposetory rocketsReposetory;
-  List<rocketModel> rockets = [];
+  final RocketsRepository rocketsReposetory;
+  List<RocketModel> rockets = [];
   RocketsCubit(
     this.rocketsReposetory,
   ) : super(RocketsInitial());
 
-  List<rocketModel> getRockets() {
+  List<RocketModel> getRockets() {
     emit(RocketsLoading());
     rocketsReposetory.getListOfRockets().then(
       (rockes) {
