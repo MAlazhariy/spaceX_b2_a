@@ -20,8 +20,7 @@ void showBottomSheett(BuildContext context, {required rocketModel rocket}) {
       return GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: () {
-          // Do something when the sheet is tapped
-          Navigator.pop(context); // Close the bottom sheet
+          Navigator.pop(context);
         },
         // todo: zak - why using Container?
         // Could you use something better?
@@ -30,17 +29,19 @@ void showBottomSheett(BuildContext context, {required rocketModel rocket}) {
           child: ListView(
 
             children: <Widget>[
-              // todo: zak - why did you use this operator `!`?
-              // todo: zak - make the variables non-nullable.
-              // هو انت كل ما تستعمل المتغير هتكتب قدامه !
+              // todo: why did you use this operator `!`?
+              // todo: make the variables non-nullable.
+              // هو كل ما تستعمل المتغير هتكتب قدامه العلامة دي !
               // طالما هتستخدمها كل مرة أمال عملت المتغير nullable ليه؟
               Image.network(rocket.img!),
               Text(rocket.name!),
               Text(rocket.description!,style: TextStyle(fontSize: 25),),
+              // todo: what if the cost is null?
               Text('Cost: ${rocket.cost}',style: TextStyle(fontSize: 25),),
+              // todo: what if the var is null?
+              // todo: what is the main functionality of this variable `wikipedia`?
+              // لو اهتميت بتسمية المتغير صح هتقدر بسهولة تميز انه رابط المفروض يفتح للمستخدم مش نص يتعرض
               Text(rocket.wikipedia!,style: TextStyle(fontSize: 25),),
-
-
             ],
           ),
         ),
