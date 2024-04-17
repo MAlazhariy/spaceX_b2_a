@@ -10,6 +10,9 @@ import 'package:spacex/features/launches/logic/launch_bloc.dart';
 import 'package:spacex/my_app.dart';
 import 'package:flutter/material.dart';
 
+import 'features/rocket/logic/rockets_cubit.dart';
+import 'features/rocket/view/screens/rockets_screen.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -30,6 +33,7 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider(create: (_) => sl<HomeBloc>()),
+        BlocProvider(create: (_) => sl<RocketsCubit>()),
         // todo: add the other Blocs here by yourself
       ],
       child: EasyLocalization(
@@ -37,6 +41,7 @@ void main() async {
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         child: const MyApp(),
+
       ),
     ),
   );
