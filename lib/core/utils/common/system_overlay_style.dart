@@ -8,7 +8,7 @@ const kSystemOverlayStyle = SystemUiOverlayStyle(
   systemNavigationBarColor: Colors.transparent,
   systemNavigationBarDividerColor: kMainColor,
   // Status bar brightness (optional)
-  statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
-  systemNavigationBarIconBrightness: Brightness.dark,
-  statusBarBrightness: Brightness.light, // For iOS (dark icons)
+  statusBarIconBrightness: Brightness.light, // For Android (light icons)
+  systemNavigationBarIconBrightness: Brightness.light,
+  statusBarBrightness: Brightness.dark, // For iOS (light icons)
 );
