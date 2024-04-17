@@ -6,7 +6,7 @@ import 'package:spacex/features/language/data/model/language_model.dart';
 
 class Language {
   static const List<LanguageModel> _languages = [
-    LanguageModel(image: AppImages.arFlag, title: 'العربية', code: 'ar'),
+    // LanguageModel(image: AppImages.arFlag, title: 'العربية', code: 'ar'),
     LanguageModel(image: AppImages.enFlag, title: 'English', code: 'en'),
   ];
 
