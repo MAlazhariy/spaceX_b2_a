@@ -1,19 +1,18 @@
 import 'package:dio/dio.dart';
+import 'package:spacex/core/network/api/api_client.dart';
 
 class RocketsApiServes {
-  final Dio dio;
+  final ApiClient<Response> apiClient;
 
-  RocketsApiServes(this.dio);
+  RocketsApiServes(this.apiClient);
 
   Future<List<dynamic>> apiRockets() async {
     try {
-      Response response =
-          await dio.get('https://api.spacexdata.com/v4/rockets');
+      Response response = await apiClient.get('/rockets');
 
       return response.data;
     } catch (e) {
       return [];
-      // TODO
     }
   }
 }

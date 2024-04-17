@@ -8,7 +8,6 @@ part 'launch_state.dart';
 class LaunchBloc extends Bloc<LaunchEvent, LaunchState> {
   LaunchBloc() : super(LaunchState()) {
     on<LaunchEvent>((event, emit) {
-      // TODO: implement event handler
     });
   }
 }

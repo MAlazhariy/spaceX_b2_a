@@ -7,7 +7,7 @@ import '../../logic/rockets_cubit.dart';
 import '../widgets/bottomSheet.dart';
 
 class RocketsScreen extends StatefulWidget {
-  RocketsScreen({Key? key}) : super(key: key);
+  const RocketsScreen({super.key});
 
   @override
   State<RocketsScreen> createState() => _RocketsScreenState();
@@ -17,7 +17,6 @@ class _RocketsScreenState extends State<RocketsScreen> {
   late List<rocketModel> rockets;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     rockets = BlocProvider.of<RocketsCubit>(context).getRockets();
