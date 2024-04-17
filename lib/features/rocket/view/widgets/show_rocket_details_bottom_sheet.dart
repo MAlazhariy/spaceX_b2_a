@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 // todo: zak - bad way to import
 //  see this discussion on GitHub to know the reason

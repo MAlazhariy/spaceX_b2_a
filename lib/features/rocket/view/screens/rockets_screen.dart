@@ -8,7 +8,7 @@ import '../../logic/rockets_cubit.dart';
 import '../widgets/show_rocket_details_bottom_sheet.dart';
 
 class RocketsScreen extends StatefulWidget {
-  const RocketsScreen({Key? key}) : super(key: key);
+  const RocketsScreen({super.key});
 
   @override
   State<RocketsScreen> createState() => _RocketsScreenState();
@@ -23,12 +23,12 @@ class _RocketsScreenState extends State<RocketsScreen> {
     rockets = BlocProvider.of<RocketsCubit>(context).getRockets();
   }
 
-  Widget BuildBlocWidget() {
+  Widget buildBlocWidget() {
     return BlocBuilder<RocketsCubit, RocketsState>(builder: (context, state) {
       if (state is RocketsLoaded) {
         rockets = (state).rockets;
 
-        return BuildRocketsList();
+        return buildRocketsList();
       } else {
         return showLoadingIndicator();
       }
@@ -37,13 +37,13 @@ class _RocketsScreenState extends State<RocketsScreen> {
 
   Widget showLoadingIndicator() {
     // tip: use `CircularProgressIndicator.adaptive` instead
-    return Center(
+    return const Center(
         child: MainCircularProgress(color: Colors.yellow),
     );
   }
 
   // todo: naming convention
-  Widget BuildRocketsList() {
+  Widget buildRocketsList() {
     return ListView.builder(
         itemCount: rockets.length,
         itemBuilder: (item, index) {
@@ -77,7 +77,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // todo: make it class instead of the function
-      body: BuildBlocWidget(),
+      body: buildBlocWidget(),
     );
   }
 }
