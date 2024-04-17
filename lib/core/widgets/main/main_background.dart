@@ -19,7 +19,7 @@ class MainBackground extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            kBGGradientColor,
+            kMainColor,
             // kBGGradientWhiteTransparentColor,
             // kBGGradientWhiteTransparentColor,
             // kBGGradientWhiteTransparentColor,
