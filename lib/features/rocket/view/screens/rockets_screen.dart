@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spacex/core/widgets/main/main_circular_progress_adaptive.dart';
+import 'package:spacex/features/rocket/view/screens/rockets_list.dart';
 
 import '../../data/model/rocket_model.dart';
 import '../../logic/rockets_cubit.dart';
-import '../widgets/show_rocket_details_bottom_sheet.dart';
 
 class RocketsScreen extends StatefulWidget {
   const RocketsScreen({super.key});
@@ -28,7 +28,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
       if (state is RocketsLoaded) {
         rockets = (state).rockets;
 
-        return buildRocketsList();
+        return RocketsList().buildRocketsList( rockets, context);
       } else {
         return showLoadingIndicator();
       }
@@ -36,42 +36,12 @@ class _RocketsScreenState extends State<RocketsScreen> {
   }
 
   Widget showLoadingIndicator() {
-    // tip: use `CircularProgressIndicator.adaptive` instead
     return const Center(
-        child: MainCircularProgress(color: Colors.yellow),
+      child: MainCircularProgress(color: Colors.yellow),
     );
   }
 
-  // todo: naming convention
-  Widget buildRocketsList() {
-    return ListView.builder(
-        itemCount: rockets.length,
-        itemBuilder: (item, index) {
-          final rocket = rockets[index];
 
-          return GestureDetector(
-            onTap: () {
-              showRocketDetailsBottomSheet(context, rocket: rocket);
-            },
-            child: Card(
-              margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
-              color: Colors.grey,
-              child: ListTile(
-                title: Text(
-                  rocket.name,
-                  style: const TextStyle(fontSize: 35),
-                ),
-                subtitle: Text(
-                  "\$${rocket.cost.toString()}",
-                  style: const TextStyle(fontSize: 35),
-                ),
-                //  subtitle: Text(rockets[index].description!.substring(0,43)+"...",style: TextStyle(fontSize: 20),),
-                leading: Image.network(rockets[index].image),
-              ),
-            ),
-          );
-        });
-  }
 
   @override
   Widget build(BuildContext context) {

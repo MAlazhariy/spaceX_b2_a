@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:spacex/core/constants.dart';
 import 'package:spacex/core/resources/app_images.dart';
 import 'package:spacex/core/resources/app_theme.dart';
+import 'package:spacex/features/rocket/view/screens/rockets_screen.dart';
 import 'package:spacex/features/splash/view/screens/splash_screen.dart';
 
 class MyApp extends StatefulWidget {
@@ -32,7 +33,8 @@ class _MyAppState extends State<MyApp> {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: const SplashScreen(),
+      home:const RocketsScreen(),
+     // home: const SplashScreen(),
     );
   }
 }
