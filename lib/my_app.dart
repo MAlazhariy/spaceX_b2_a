@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spacex/core/constants.dart';
 import 'package:spacex/core/resources/app_theme.dart';
+import 'package:spacex/features/rocket/view/screens/rockets_screen.dart';
 import 'package:spacex/features/splash/view/screens/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+   //   home: RocketsScreen(),
       home: const SplashScreen(),
     );
   }
