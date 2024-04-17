@@ -7,7 +7,8 @@ import '../../logic/rockets_cubit.dart';
 import '../widgets/bottomSheet.dart';
 
 class RocketsScreen extends StatefulWidget {
-  const RocketsScreen({super.key});
+  // todo: zak - add <const> key + old Flutter version
+  RocketsScreen({Key? key}) : super(key: key);
 
   @override
   State<RocketsScreen> createState() => _RocketsScreenState();
