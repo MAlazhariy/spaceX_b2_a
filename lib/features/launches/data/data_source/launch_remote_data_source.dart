@@ -11,6 +11,7 @@ abstract class BaseLaunchRemoteDataSource {
   BaseLaunchRemoteDataSource(this.apiClient);
 
   Future<LaunchModel> getLaunches();
+  Future<LaunchModel> getNextLaunch();
 }
 
 class LaunchRemoteDataSource extends BaseLaunchRemoteDataSource {
@@ -25,5 +26,16 @@ class LaunchRemoteDataSource extends BaseLaunchRemoteDataSource {
     }
 
     throw ServerException.fromResponse(response);
+  }
+
+  @override
+  Future<LaunchModel> getNextLaunch() async {
+    final response = await apiClient.get(AppConstants.NEXT_LAUNCH);
+
+    if(response.statusCode == 200){
+      return LaunchModel.fromJson(response.data);
+    }
+
+    throw(ServerException.fromResponse(response));
   }
 }

@@ -11,7 +11,7 @@ Future<void> showCustomDialog({
   Color? titleColor,
   required String description,
   IconData? icon = Icons.error_outline,
-  Color? backgroundColor = kBGGradientColor,
+  Color? backgroundColor = kLightGreyColor,
   Color iconColor = kTitleBodyColor,
   List<DialogButton> buttons = const [],
 

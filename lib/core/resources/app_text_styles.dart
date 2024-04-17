@@ -26,7 +26,7 @@ const kButtonTextStyle = TextStyle(
 );
 // bold - 4
 const kHintTextStyle = TextStyle(
-  color: kTitleBodyLightColor,
+  color: kTitleHintColor,
   fontSize: AppSize.fontDefault,
   fontWeight: FontWeight.w500,
   // height: 1.4,

@@ -13,11 +13,9 @@ class RocketsCubit extends Cubit<RocketsState> {
   RocketsCubit(
     this.rocketsReposetory,
   ) : super(RocketsInitial());
+
   List<rocketModel> getRockets() {
-    // todo: set the loading state
-    // How could I know if rockets is loading?
-    // todo: set the Error state! .. how did you make error handling?
-    // And how could I get the error message if an error occurred?
+    emit(RocketsLoading());
     rocketsReposetory.getListOfRockets().then(
       (rockes) {
         emit(RocketsLoaded(rockes));

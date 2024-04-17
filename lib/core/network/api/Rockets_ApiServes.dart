@@ -1,6 +1,7 @@
 // todo: zak - naming convention of the file
 import 'package:dio/dio.dart';
 import 'package:spacex/core/network/api/api_client.dart';
+import 'package:spacex/core/network/api/dio_client.dart';
 
 // todo: zak - naming of the class
 // `Service` instead `Serves`
@@ -35,12 +36,20 @@ class RocketsApiServes {
 
 
 
+
+
+
+
+
+
+
+
+
   final ApiClient<Response> apiClient;
 
   RocketsApiServes(this.apiClient);
 
-  // todo: zak - you do not need to type `<dynamic>` keyword .. preferred to set the return type, i.e: `List<Map<String, dynamic>>`
-  Future<List<dynamic>> apiRockets() async {
+  Future<List> apiRockets() async {
     try {
       Response response = await apiClient.get('/rockets');
 
@@ -54,4 +63,27 @@ class RocketsApiServes {
       return [];
     }
   }
+}
+
+class X {
+  X._();
+
+  static X get instance {
+    if(_instance == null){
+      _instance = X._();
+    }
+
+    return _instance!;
+  }
+
+  static X? _instance;
+
+  hello (){}
+}
+
+final x = X.instance;
+
+
+hi(){
+  x.hello();
 }

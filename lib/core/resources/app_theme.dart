@@ -8,7 +8,7 @@ import 'package:spacex/core/utils/common/system_overlay_style.dart';
 class AppThemes {
   static const _disabledColor = Color(0xffCCDBE1);
   static const _inputRadius = BorderRadius.all(Radius.circular(AppSize.radiusMax));
-  static ThemeData light = ThemeData(
+  static ThemeData dark = ThemeData(
     // material 3
     useMaterial3: true,
 
@@ -22,15 +22,16 @@ class AppThemes {
     ),
     primarySwatch: kPrimarySwatch,
 
+    scaffoldBackgroundColor: kBackgroundColor,
+
     /// font family
     fontFamily: FontFamily.baloo,
 
     /// appBar theme
     appBarTheme: const AppBarTheme(
-      centerTitle: true,
-      backgroundColor: Colors.transparent,
-      scrolledUnderElevation: 0,
-      elevation: 0,
+      // centerTitle: true,
+      // scrolledUnderElevation: 0,
+      // elevation: 0,
       systemOverlayStyle: kSystemOverlayStyle,
     ),
 

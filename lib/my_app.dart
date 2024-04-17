@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 import 'package:spacex/core/constants.dart';
 import 'package:spacex/core/resources/app_images.dart';
 import 'package:spacex/core/resources/app_theme.dart';
+import 'package:spacex/features/home/view/screens/home_screen.dart';
 import 'package:spacex/features/splash/view/screens/splash_screen.dart';
 
 class MyApp extends StatefulWidget {
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: AppConstants.APP_NAME,
       navigatorKey: navigatorKey,
-      theme: AppThemes.light,
+      theme: AppThemes.dark,
       debugShowCheckedModeBanner: false,
       // localization
       localizationsDelegates: context.localizationDelegates,

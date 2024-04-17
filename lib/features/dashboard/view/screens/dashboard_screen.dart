@@ -20,8 +20,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const LaunchScreen(),
-    // todo: zak - where's the <const>?
-     RocketsScreen(),
+     const RocketsScreen(),
   ];
 
   @override
