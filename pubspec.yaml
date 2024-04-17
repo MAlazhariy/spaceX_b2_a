@@ -23,6 +23,7 @@ dependencies:
   #  connection_wrapper:
   flutter_animate: ^4.5.0
   share_plus: ^8.0.3
+
   # Code generator.
   build_runner:
   # Code generation for immutable classes (cubit & retrofit).
