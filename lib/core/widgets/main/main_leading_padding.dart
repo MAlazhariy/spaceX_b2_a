@@ -24,7 +24,7 @@ class MyBackLeading extends StatelessWidget {
       child: IconButton(
         icon: Icon(
           Platform.isIOS ? Icons.arrow_back_ios : Icons.arrow_back,
-          color: kPrimaryColor,
+          color: kMainColor,
         ),
         onPressed: onPressed ??
             () {

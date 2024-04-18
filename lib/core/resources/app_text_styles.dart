@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:spacex/core/resources/app_colors.dart';
 import 'package:spacex/core/resources/app_size.dart';
+<<<<<<< HEAD
 
 // todo: delete unused styles
+=======
+>>>>>>> ee7acad645ac5f6810409b46302e018230dab57c
 // medium - 3
 const kMediumFontStyle = TextStyle(
   fontSize: AppSize.fontDefault,
@@ -28,7 +31,7 @@ const kButtonTextStyle = TextStyle(
 );
 // bold - 4
 const kHintTextStyle = TextStyle(
-  color: kTitleBodyLightColor,
+  color: kTitleHintColor,
   fontSize: AppSize.fontDefault,
   fontWeight: FontWeight.w500,
   // height: 1.4,

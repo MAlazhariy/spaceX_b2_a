@@ -61,7 +61,7 @@ class CustomBottomBar extends StatelessWidget {
       children: [
         Container(
           decoration: ShapeDecoration(
-            color: Colors.white,
+            color:kSecondaryColor,
             shape: const StadiumBorder(),
             shadows: [
               BoxShadow(

@@ -48,14 +48,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
               /// Profile
               CustomBottomBarItem(
-                icon: const Icon(Icons.notes),
-                title: "my_orders".tr(),
+                icon: const Icon(Icons.rocket_launch),
+                title: "Launches".tr(),
               ),
 
               /// Profile
               CustomBottomBarItem(
-                icon: const Icon(Icons.add),
-                title: "profile".tr(),
+                icon: const Icon(Icons.rocket_rounded),
+                title: "Rockets".tr(),
               ),
             ],
           ),
