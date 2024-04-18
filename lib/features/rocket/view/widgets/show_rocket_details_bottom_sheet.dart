@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // todo: zak - bad way to import
 //  see this discussion on GitHub to know the reason
@@ -26,18 +26,31 @@ void showRocketDetailsBottomSheet(
               Text(rocket.name),
               Text(
                 rocket.description,
-                style: const TextStyle(fontSize: 25),
+
+                style: const TextStyle(fontSize: 25,color: Colors.black),
               ),
               if (rocket.cost != null)
                 Text(
-                  'Cost: ${rocket.cost}',
-                  style: const TextStyle(fontSize: 25),
+                  'Cost: \$ ${rocket.cost}',
+                  style: const TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.bold),
                 ),
               if (rocket.wikipediaUrl != null)
-                Text(
-                  rocket.wikipediaUrl!,
-                  style: const TextStyle(fontSize: 25),
-                ),
+              GestureDetector(
+                // not working for some reason
+                onTap: () {
+                  launchUrl(rocket.wikipediaUrl as Uri);
+                },
+              child:  Text(
+                rocket.wikipediaUrl!,
+              style: TextStyle(
+                fontSize: 25,
+              decoration: TextDecoration.underline,
+              color: Colors.blue,
+              ),
+              ),
+              ),
+
+
             ],
           ),
         ),

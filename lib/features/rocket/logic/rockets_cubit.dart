@@ -8,19 +8,19 @@ import '../data/repository/rockets_repository.dart';
 part 'rockets_state.dart';
 
 class RocketsCubit extends Cubit<RocketsState> {
-  final RocketsRepository rocketsReposetory;
+  final RocketsRepository rocketsRepository;
   List<RocketModel> rockets = [];
   RocketsCubit(
-    this.rocketsReposetory,
+    this.rocketsRepository,
   ) : super(RocketsInitial());
 
   List<RocketModel> getRockets() {
     emit(RocketsLoading());
-    rocketsReposetory.getListOfRockets().then(
+    rocketsRepository.getListOfRockets().then(
       (rockes) {
         emit(RocketsLoaded(rockes));
 
-        this.rockets = rockes;
+        rockets = rockes;
       },
     );
 
