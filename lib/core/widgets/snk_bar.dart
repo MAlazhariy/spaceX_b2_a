@@ -46,7 +46,8 @@ class SnkBar {
             children: [
               if (icon != null)
                 Container(
-                  padding: const EdgeInsetsDirectional.only(end: AppSize.paddingSmall),
+                  padding: const EdgeInsetsDirectional.only(
+                      end: AppSize.paddingSmall),
                   height: 50,
                   child: icon,
                 ),
@@ -62,7 +63,8 @@ class SnkBar {
               ),
               if (action != null)
                 Padding(
-                  padding: const EdgeInsetsDirectional.only(start: AppSize.paddingSmall),
+                  padding: const EdgeInsetsDirectional.only(
+                      start: AppSize.paddingSmall),
                   child: action,
                 ),
             ],

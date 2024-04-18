@@ -17,17 +17,18 @@ class SettingsLocalDataSource extends BaseSettingsLocalDataSource {
 
   @override
   bool isFirstLaunch() {
-    try{
+    try {
       return sharedPreferences.getBool(AppConstants.FIRST_LAUNCH_KEY) != false;
-    } catch (e){
+    } catch (e) {
       throw LocalException(message: '$e');
     }
   }
+
   @override
   Future<void> setFirstLaunch(bool value) async {
-    try{
+    try {
       await sharedPreferences.setBool(AppConstants.FIRST_LAUNCH_KEY, value);
-    } catch (e){
+    } catch (e) {
       throw LocalException(message: '$e');
     }
   }

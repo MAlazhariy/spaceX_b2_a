@@ -7,7 +7,8 @@ import 'package:spacex/core/utils/common/system_overlay_style.dart';
 
 class AppThemes {
   static const _disabledColor = Color(0xffCCDBE1);
-  static const _inputRadius = BorderRadius.all(Radius.circular(AppSize.radiusMax));
+  static const _inputRadius =
+      BorderRadius.all(Radius.circular(AppSize.radiusMax));
   static ThemeData light = ThemeData(
     // material 3
     useMaterial3: true,

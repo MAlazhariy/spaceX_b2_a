@@ -55,7 +55,10 @@ Future<void> showCustomDialog({
                     icon,
                     size: 40,
                     color: iconColor,
-                  ).animate().shake(delay: 300.milliseconds, offset: const Offset(4, 1), rotation: 0.2),
+                  ).animate().shake(
+                      delay: 300.milliseconds,
+                      offset: const Offset(4, 1),
+                      rotation: 0.2),
                 ),
 
                 SingleChildScrollView(
@@ -73,7 +76,8 @@ Future<void> showCustomDialog({
                           Align(
                             child: Text(
                               title,
-                              style: context.styleHeader2.copyWith(color: titleColor),
+                              style: context.styleHeader2
+                                  .copyWith(color: titleColor),
                               textAlign: TextAlign.center,
                             ),
                           ),

@@ -17,7 +17,6 @@ class ImageViewerScreen extends StatefulWidget {
 }
 
 class _ImageViewerScreenState extends State<ImageViewerScreen> {
-
   @override
   void initState() {
     SystemChrome.setPreferredOrientations(DeviceOrientation.values);

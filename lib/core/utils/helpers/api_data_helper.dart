@@ -28,6 +28,8 @@ class ApiDataHelper {
 
   static DateTime? getDateTimeFromStamp(i) {
     final timeStamp = getInt(i);
-    return timeStamp != null ? DateTime.fromMillisecondsSinceEpoch(timeStamp * 1000) : null;
+    return timeStamp != null
+        ? DateTime.fromMillisecondsSinceEpoch(timeStamp * 1000)
+        : null;
   }
 }

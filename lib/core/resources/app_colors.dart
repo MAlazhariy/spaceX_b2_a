@@ -21,6 +21,7 @@ const kBorderOverlayColor = Color(0xffE8F3F8);
 const kBorderNeutralColor = Color(0xffCCDBE1);
 const kStrokeColor = Color(0xFF5B7083);
 const kShadowColor = Color(0xFFE5EDF0);
+
 /// link
 const kLightGreyColor = Color(0xFFE8E8E8);
 const kGreyColor = Color(0xFFDFE2EC);
@@ -37,7 +38,6 @@ const kBGGradient2Color = Color(0xffc3f2ff);
 // Shimmer Colors
 final shimmerBaseColor = kLightGreyColor.withOpacity(0.23);
 final shimmerHighlightColor = kLightGreyColor.withOpacity(0.50);
-
 
 // System Colors
 const kRedColor = Color(0xFFFF5C68);

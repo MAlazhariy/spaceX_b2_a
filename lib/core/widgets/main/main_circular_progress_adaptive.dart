@@ -20,7 +20,7 @@ class MainCircularProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(loading == false){
+    if (loading == false) {
       return const SizedBox.shrink();
     }
 

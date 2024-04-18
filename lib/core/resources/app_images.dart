@@ -1,4 +1,3 @@
-
 class AppImages {
   static const String _baseImagePath = "assets/images";
 

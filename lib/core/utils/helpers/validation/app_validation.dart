@@ -20,7 +20,8 @@ abstract class AppValidation {
     return null;
   }
 
-  static String? validatePhoneNumber(BuildContext context, String? phoneNumber) {
+  static String? validatePhoneNumber(
+      BuildContext context, String? phoneNumber) {
     if (phoneNumber!.isEmpty || !AppRegExp.isPhoneNumberValid(phoneNumber)) {
       return '🔴Phone number is required!';
     }
@@ -34,8 +35,10 @@ abstract class AppValidation {
     return null;
   }
 
-  static String? validateConfirmPassword(BuildContext context, String? password, String? confirmPassword) {
-    if (confirmPassword!.isEmpty || !AppRegExp.isPasswordValid(confirmPassword)) {
+  static String? validateConfirmPassword(
+      BuildContext context, String? password, String? confirmPassword) {
+    if (confirmPassword!.isEmpty ||
+        !AppRegExp.isPasswordValid(confirmPassword)) {
       return '🔴Confirm Password is required!';
     } else if (password != confirmPassword) {
       return '🔴Password and Confirm Password must be same!';

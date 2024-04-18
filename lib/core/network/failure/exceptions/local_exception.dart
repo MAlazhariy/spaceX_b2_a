@@ -1,4 +1,3 @@
-
 /// Use [LocalException] to:
 /// - Throw an [Exception] in a [DataSource].
 ///

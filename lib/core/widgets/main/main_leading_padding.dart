@@ -5,13 +5,16 @@ import 'package:spacex/core/resources/app_size.dart';
 import 'package:flutter/material.dart';
 
 class MyBackLeading extends StatelessWidget {
-  const MyBackLeading({super.key, this.onPressed,});
+  const MyBackLeading({
+    super.key,
+    this.onPressed,
+  });
 
   final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
-    if(!Navigator.canPop(context) && onPressed == null){
+    if (!Navigator.canPop(context) && onPressed == null) {
       return const SizedBox();
     }
     return Padding(
@@ -23,9 +26,10 @@ class MyBackLeading extends StatelessWidget {
           Platform.isIOS ? Icons.arrow_back_ios : Icons.arrow_back,
           color: kPrimaryColor,
         ),
-        onPressed: onPressed ?? () {
-          Navigator.pop(context);
-        },
+        onPressed: onPressed ??
+            () {
+              Navigator.pop(context);
+            },
       ),
     );
   }

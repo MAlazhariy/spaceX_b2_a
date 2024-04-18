@@ -35,9 +35,11 @@ class MainBackground extends StatelessWidget {
           end: Alignment.bottomCenter,
         ),
       ),
-      padding: paddingTop ? EdgeInsets.only(
-        top: MediaQuery.of(context).padding.top,
-      ) : null,
+      padding: paddingTop
+          ? EdgeInsets.only(
+              top: MediaQuery.of(context).padding.top,
+            )
+          : null,
       child: child,
     );
   }

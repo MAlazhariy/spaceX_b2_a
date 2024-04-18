@@ -82,7 +82,9 @@ class CustomBottomBar extends StatelessWidget {
             child: Row(
               /// Using a different alignment when there are 2 items or less
               /// so it behaves the same as BottomNavigationBar.
-              mainAxisAlignment: items.length <= 2 ? MainAxisAlignment.spaceEvenly : MainAxisAlignment.spaceAround,
+              mainAxisAlignment: items.length <= 2
+                  ? MainAxisAlignment.spaceEvenly
+                  : MainAxisAlignment.spaceAround,
               children: List.generate(
                 items.length,
                 (index) {
@@ -95,8 +97,11 @@ class CustomBottomBar extends StatelessWidget {
                     curve: curve,
                     duration: duration,
                     builder: (context, t, _) {
-                      final selectedColor = item.selectedColor ?? selectedItemColor ?? kMainColor;
-                      final unselectedColor = item.unselectedColor ?? unselectedItemColor ?? kBorderNeutralColor;
+                      final selectedColor =
+                          item.selectedColor ?? selectedItemColor ?? kMainColor;
+                      final unselectedColor = item.unselectedColor ??
+                          unselectedItemColor ??
+                          kBorderNeutralColor;
 
                       return InkWell(
                         onTap: () => onTap?.call(index),
@@ -112,17 +117,21 @@ class CustomBottomBar extends StatelessWidget {
                             // icon
                             IconTheme(
                               data: IconThemeData(
-                                color: Color.lerp(unselectedColor, selectedColor, t),
+                                color: Color.lerp(
+                                    unselectedColor, selectedColor, t),
                                 size: 24,
                               ),
-                              child: isSelected ? item.activeIcon ?? item.icon : item.icon,
+                              child: isSelected
+                                  ? item.activeIcon ?? item.icon
+                                  : item.icon,
                             ),
                             ClipRect(
                               clipBehavior: Clip.antiAlias,
                               child: Text(
                                 item.title,
                                 style: context.styleBodySmall.copyWith(
-                                  color: Color.lerp(kBorderNeutralColor, kPrimaryTitleColor, t),
+                                  color: Color.lerp(kBorderNeutralColor,
+                                      kPrimaryTitleColor, t),
                                 ),
                               ),
                             ),

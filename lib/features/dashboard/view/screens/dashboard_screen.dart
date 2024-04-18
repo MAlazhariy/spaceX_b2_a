@@ -34,7 +34,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
       builder: (context, index) {
         return Scaffold(
           body: _screens[index],
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerFloat,
           bottomNavigationBar: CustomBottomBar(
             currentIndex: index,
             onTap: (i) => context.read<DashboardCubit>().updateIndex(i),

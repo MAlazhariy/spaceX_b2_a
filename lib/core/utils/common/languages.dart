@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:spacex/core/resources/app_images.dart';
@@ -18,7 +17,8 @@ class Language {
     return context.locale;
   }
 
-  static bool isRtl(BuildContext context) => context.locale.languageCode == 'ar';
+  static bool isRtl(BuildContext context) =>
+      context.locale.languageCode == 'ar';
 
   static Future<void> changeLanguage(
     BuildContext context, {

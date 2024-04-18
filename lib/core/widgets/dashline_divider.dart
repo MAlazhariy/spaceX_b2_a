@@ -33,7 +33,9 @@ class DashLineDivider extends StatelessWidget {
       ),
       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          final boxSize = direction == Axis.horizontal ? constraints.constrainWidth() : constraints.constrainHeight();
+          final boxSize = direction == Axis.horizontal
+              ? constraints.constrainWidth()
+              : constraints.constrainHeight();
           final dCount = (boxSize * fillRate / dashWith).floor();
           return Flex(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
