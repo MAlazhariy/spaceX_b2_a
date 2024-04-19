@@ -38,19 +38,32 @@ class _LaunchCountDownWidgetState extends State<LaunchCountDownWidget> {
   @override
   Widget build(BuildContext context) {
 
-    return SlideCountdown(
-      duration: widget.countDownDuration,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(AppSize.radiusExtraLarge),
-      ),
-      padding: const EdgeInsets.symmetric(
-        vertical: AppSize.paddingSmall,
-        horizontal: AppSize.paddingLarge,
-      ),
-      style: context.styleHeader1.copyWith(
-        color: kTitleDarkColor,
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsetsDirectional.only(
+            start: AppSize.paddingExtraSmall,
+          ),
+          child: Text(
+            'Launch after:',
+          ),
+        ),
+        SlideCountdown(
+          duration: widget.countDownDuration,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(AppSize.radiusLarge),
+          ),
+          padding: const EdgeInsets.symmetric(
+            vertical: AppSize.paddingSmall,
+            horizontal: AppSize.paddingLarge,
+          ),
+          style: context.styleHeader1.copyWith(
+            color: kTitleDarkColor,
+          ),
+        ),
+      ],
     );
 
     // return RawSlideCountdown(

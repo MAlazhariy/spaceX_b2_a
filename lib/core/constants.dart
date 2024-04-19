@@ -9,8 +9,13 @@ class AppConstants {
   static const String BASE_URL = 'https://api.spacexdata.com/v4';
 
   static const String ROCKETS = '/rockets';
+  static const String ALL_LAUNCHES = '/launches';
   static const String NEXT_LAUNCH = '/launches/next';
-
+  static const String UPCOMING_LAUNCHES = '/launches/upcoming';
+  static const String PAST_LAUNCHES = '/launches/past';
+  static const String DRAGONS = '/dragons';
+  static const String SHIPS = '/ships';
+  static const String CAPSULES = '/capsules';
 
   // Strings
   static const String APP_NAME = 'SpaceX';

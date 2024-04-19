@@ -13,13 +13,18 @@ class NextLaunchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         // todo: show bottomSheet details
+        // get launch details from id (LaunchBloc)
+        // show launch details in bottom sheet or custom screen
       },
       child: Container(
         width: double.maxFinite,
         margin: const EdgeInsets.all(AppSize.paddingLarge),
-        padding: const EdgeInsets.all(AppSize.paddingLarge),
+        padding: const EdgeInsets.symmetric(
+          vertical: AppSize.paddingLarge,
+          horizontal: AppSize.paddingExtraLarge,
+        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppSize.radiusDefault),
           color: Colors.white54,
@@ -32,17 +37,31 @@ class NextLaunchWidget extends StatelessWidget {
               return Text(state.nextLaunchFailure?.message ?? '');
             }
 
-            return Column(
+            return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Next launch',
-                  style: context.styleHeader1,
-                ),
-                const SizedBox(height: AppSize.paddingLarge),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Next launch',
+                        style: context.styleHeader1,
+                      ),
+                      const SizedBox(height: AppSize.paddingSmall),
 
-                // count down
-                const LaunchCountDownWidget(
-                  countDownDuration: Duration(days: 1, hours: 2, minutes: 24),
+                      // countdown
+                      const LaunchCountDownWidget(
+                        countDownDuration: Duration(days: 1, hours: 2, minutes: 24),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: AppSize.paddingDefault),
+                const Icon(
+                  Icons.rocket_launch,
+                  color: Colors.white,
+                  size: 50,
                 ),
               ],
             );
