@@ -17,27 +17,26 @@ class LaunchCountDownWidget extends StatefulWidget {
 }
 
 class _LaunchCountDownWidgetState extends State<LaunchCountDownWidget> {
-  late final StreamDuration streamDuration;
-
-  @override
-  void initState() {
-    streamDuration = StreamDuration(
-      config: StreamDurationConfig(
-        countDownConfig: CountDownConfig(duration: widget.countDownDuration),
-      ),
-    );
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    streamDuration.dispose();
-    super.dispose();
-  }
+  // late final StreamDuration streamDuration;
+  //
+  // @override
+  // void initState() {
+  //   streamDuration = StreamDuration(
+  //     config: StreamDurationConfig(
+  //       countDownConfig: CountDownConfig(duration: widget.countDownDuration),
+  //     ),
+  //   );
+  //   super.initState();
+  // }
+  //
+  // @override
+  // void dispose() {
+  //   streamDuration.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -60,6 +59,15 @@ class _LaunchCountDownWidgetState extends State<LaunchCountDownWidget> {
             horizontal: AppSize.paddingLarge,
           ),
           style: context.styleHeader1.copyWith(
+            color: kTitleDarkColor,
+          ),
+          durationTitle: const DurationTitle(
+            seconds: 'sec',
+            days: 'days',
+            hours: 'hours',
+            minutes: 'minutes',
+          ),
+          separatorStyle: context.styleBodyBold.copyWith(
             color: kTitleDarkColor,
           ),
         ),
