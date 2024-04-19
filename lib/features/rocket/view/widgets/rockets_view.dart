@@ -41,6 +41,5 @@ class _RocketsViewState extends State<RocketsView> {
         return const Center(child: Text('Error occurred!'));
       },
     );
-    ;
   }
 }
