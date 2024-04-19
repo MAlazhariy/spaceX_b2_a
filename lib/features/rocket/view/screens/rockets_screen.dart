@@ -30,7 +30,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
       if (state is RocketsLoaded) {
         rockets = (state).rockets;
 
-        return RocketsList().buildRocketsList(rockets, context);
+        return RocketListView(rockets: rockets);
       } else {
         return const LoadingIndicator();
       }
