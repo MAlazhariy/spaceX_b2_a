@@ -8,7 +8,7 @@ class MainCircularProgress extends StatelessWidget {
 
   const MainCircularProgress({
     super.key,
-    this.color = kMainColor,
+    this.color = Colors.white,
     this.strokeWidth = 4,
     this.size,
     this.loading = true,
