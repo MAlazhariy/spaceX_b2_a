@@ -13,7 +13,9 @@ class RocketsApiService {
 
       return response.data;
     } catch (e) {
-      // todo: zak - Error handling!
+
+      
+
       // If error occurred, how could I know if error occurred or not?
       //
       // you just returned an empty list but you did not let me know
