@@ -33,8 +33,7 @@ class _MyAppState extends State<MyApp> {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home:const RocketsScreen(),
-     // home: const SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

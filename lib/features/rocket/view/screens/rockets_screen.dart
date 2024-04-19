@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spacex/core/widgets/main/main_background.dart';
 import 'package:spacex/core/widgets/main/main_circular_progress_adaptive.dart';
 import 'package:spacex/features/rocket/view/screens/rockets_list.dart';
 
@@ -16,6 +17,7 @@ class RocketsScreen extends StatefulWidget {
 
 class _RocketsScreenState extends State<RocketsScreen> {
   late List<RocketModel> rockets;
+
   @override
   void initState() {
     super.initState();
@@ -28,7 +30,7 @@ class _RocketsScreenState extends State<RocketsScreen> {
       if (state is RocketsLoaded) {
         rockets = (state).rockets;
 
-        return RocketsList().buildRocketsList( rockets, context);
+        return RocketsList().buildRocketsList(rockets, context);
       } else {
         return showLoadingIndicator();
       }
@@ -41,13 +43,13 @@ class _RocketsScreenState extends State<RocketsScreen> {
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // todo: make it class instead of the function
-      body: buildBlocWidget(),
+      body: MainGalaxyBackground(
+        child: buildBlocWidget(),
+      ),
     );
   }
 }
