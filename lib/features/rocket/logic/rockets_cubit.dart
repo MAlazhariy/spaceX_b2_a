@@ -22,7 +22,9 @@ class RocketsCubit extends Cubit<RocketsState> {
 
         rockets = rockes;
       },
-    );
+    ).onError((error, stackTrace) {
+      emit(RocketsError());
+    });
 
     return rockets;
   }
