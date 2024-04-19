@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:spacex/core/resources/app_colors.dart';
 
 class MainCircularProgress extends StatelessWidget {
   final bool loading;

@@ -29,14 +29,17 @@ class _RocketsViewState extends State<RocketsView> {
     return BlocBuilder<RocketsCubit, RocketsState>(
       builder: (context, state) {
         // todo: zak - should handle error case
-        if (state is RocketsLoaded) {
+        if (state is RocketsLoading) {
+          return const MainCircularProgress();
+        } else if (state is RocketsLoaded) {
           rockets = state.rockets;
 
-          return RocketsList().buildRocketsList(rockets, context);
-        } else {
-          return const MainCircularProgress();
+          return RocketListView(rockets: rockets);
         }
+
+        return const Center(child: Text('Error occurred!'));
       },
-    );;
+    );
+    ;
   }
 }
