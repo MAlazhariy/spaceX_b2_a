@@ -26,31 +26,28 @@ void showRocketDetailsBottomSheet(
               Text(rocket.name),
               Text(
                 rocket.description,
-
-                style: const TextStyle(fontSize: 25,color: Colors.black),
+                style: const TextStyle(fontSize: 25, color: Colors.black),
               ),
               if (rocket.cost != null)
                 Text(
                   'Cost: \$ ${rocket.cost}',
-                  style: const TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               if (rocket.wikipediaUrl != null)
-              GestureDetector(
-                // not working for some reason
-                onTap: () {
-                  launchUrl(rocket.wikipediaUrl as Uri);
-                },
-              child:  Text(
-                rocket.wikipediaUrl!,
-              style: TextStyle(
-                fontSize: 25,
-              decoration: TextDecoration.underline,
-              color: Colors.blue,
-              ),
-              ),
-              ),
-
-
+                GestureDetector(
+                  // not working for some reason
+                  onTap: () {
+                    launchUrl(rocket.wikipediaUrl as Uri);
+                  },
+                  child: Text(
+                    rocket.wikipediaUrl!,
+                    style: const TextStyle(
+                      fontSize: 25,
+                      decoration: TextDecoration.underline,
+                      color: Colors.blue,
+                    ),
+                  ),
+                ),
             ],
           ),
         ),

@@ -37,6 +37,9 @@ dependencies:
   cached_network_image:
   flutter_svg:
   lottie:
+  slide_countdown: ^1.6.1
+  connection_wrapper:
+    path: packages/connection_checker
 
 dev_dependencies:
   flutter_test:

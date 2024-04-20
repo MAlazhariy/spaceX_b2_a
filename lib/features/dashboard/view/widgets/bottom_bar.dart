@@ -97,11 +97,8 @@ class CustomBottomBar extends StatelessWidget {
                     curve: curve,
                     duration: duration,
                     builder: (context, t, _) {
-                      final selectedColor =
-                          item.selectedColor ?? selectedItemColor ?? kMainColor;
-                      final unselectedColor = item.unselectedColor ??
-                          unselectedItemColor ??
-                          kBorderNeutralColor;
+                      final selectedColor = item.selectedColor ?? selectedItemColor ?? Colors.white;
+                      final unselectedColor = item.unselectedColor ?? unselectedItemColor ?? kStrokeColor;
 
                       return InkWell(
                         onTap: () => onTap?.call(index),
@@ -130,8 +127,7 @@ class CustomBottomBar extends StatelessWidget {
                               child: Text(
                                 item.title,
                                 style: context.styleBodySmall.copyWith(
-                                  color: Color.lerp(kBorderNeutralColor,
-                                      kPrimaryTitleColor, t),
+                                  color: Color.lerp(kStrokeColor, kPrimaryTitleColor, t),
                                 ),
                               ),
                             ),

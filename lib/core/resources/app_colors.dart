@@ -8,6 +8,7 @@ const kPrimaryLightColor = Color(0xffFAF7FF);
 // Text Colors
 const kPrimaryTitleColor = Color(0xffffffff);
 const kTitleBodyColor = Color(0xfffafafc);
+const kTitleDarkColor = Color(0xff212121);
 const kTitleHeadColor = Color(0xffebebf2);
 const kTitleHintColor = Color(0xff3d3d3d);
 const kSubtitleColor = Color(0xffd8d8f0);
