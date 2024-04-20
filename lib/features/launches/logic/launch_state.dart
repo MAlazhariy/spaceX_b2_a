@@ -18,6 +18,7 @@ class LaunchState extends Equatable {
     RequestStatus? nextLaunchStatus,
     Failure? nextLaunchFailure,
     LaunchModel? nextLaunchModel,
+     
   }) {
     return LaunchState._(
       // next launch

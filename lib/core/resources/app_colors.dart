@@ -14,11 +14,20 @@ const kTitleHintColor = Color(0xff3d3d3d);
 const kSubtitleColor = Color(0xffd8d8f0);
 
 // Custom Colors
+<<<<<<< HEAD
+const kBorderColor = Color(0xffE5EDF0);
+const kBorderOverlayColor = Color(0xffE8F3F8);
+const kBorderNeutralColor = Color(0xffCCDBE1);
+const kStrokeColor = Color(0xFF5B7083);
+const kShadowColor = Color(0xFFE5EDF0);
+
+=======
 const kBorderColor = Color(0xfff0f0f0);
 const kBorderOverlayColor = Color(0xfff7f7f7);
 const kBorderNeutralColor = Color(0xffe0e0e0);
 const kStrokeColor = Color(0xFF828282);
 const kShadowColor = Color(0xFFF0F0F0);
+>>>>>>> ee7acad645ac5f6810409b46302e018230dab57c
 /// link
 const kLightGreyColor = Color(0xFFE8E8E8);
 const kGreyColor = Color(0xFFBBBBBB);
@@ -30,7 +39,6 @@ const kSkyBackgroundColor = Color(0xff08071a);
 // Shimmer Colors
 final shimmerBaseColor = kLightGreyColor.withOpacity(0.23);
 final shimmerHighlightColor = kLightGreyColor.withOpacity(0.50);
-
 
 // System Colors
 const kRedColor = Color(0xFFFF5C68);

@@ -27,4 +27,9 @@ class AppConstants {
   // Global
   static const String GUEST_TOKEN = '-';
   static const double BANNER_ASPECT_RATIO = 380 / 140;
+
+static const BaseUrl_Laaunches= 'https://api.spacexdata.com/v3';
+static const Launches_Screen='/';
+
+
 }

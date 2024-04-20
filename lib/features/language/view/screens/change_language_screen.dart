@@ -10,7 +10,6 @@ import 'package:spacex/features/language/data/model/language_model.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-
 class ChangeLanguageScreen extends StatefulWidget {
   const ChangeLanguageScreen({super.key});
 
@@ -89,7 +88,8 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                         index: index,
                       );
                     },
-                    separatorBuilder: (_, index) => const SizedBox(height: AppSize.paddingDefault),
+                    separatorBuilder: (_, index) =>
+                        const SizedBox(height: AppSize.paddingDefault),
                   ),
                 ),
               ),
@@ -103,7 +103,8 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
               ),
               child: MainButton(
                 title: 'save'.tr(),
-                onPressed: _selectedLang != null && _selectedLang != context.locale.toString()
+                onPressed: _selectedLang != null &&
+                        _selectedLang != context.locale.toString()
                     ? () async {
                         _onChangeLanguage(context);
                       }
@@ -169,7 +170,9 @@ class _ChangeLanguageScreenState extends State<ChangeLanguageScreen> {
                 const SizedBox(width: AppSize.paddingDefault),
                 Text(
                   languageModel.title,
-                  style: isSelected ? context.styleBodyBold : context.styleSubtitle,
+                  style: isSelected
+                      ? context.styleBodyBold
+                      : context.styleSubtitle,
                 ),
               ],
             ),

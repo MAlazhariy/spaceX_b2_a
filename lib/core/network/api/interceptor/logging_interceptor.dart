@@ -17,7 +17,8 @@ class LoggingInterceptor extends InterceptorsWrapper {
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
-    debugPrint("<-- [${response.data is Map ? (response.data?['code'] ?? response.statusCode) : response.statusCode}] ${response.requestOptions.path}");
+    debugPrint(
+        "<-- [${response.data is Map ? (response.data?['code'] ?? response.statusCode) : response.statusCode}] ${response.requestOptions.path}");
     debugPrint("${response.data}".replaceAll('\n', ' '));
     debugPrint("-----");
     return super.onResponse(response, handler);

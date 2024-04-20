@@ -9,7 +9,6 @@ import 'package:spacex/core/network/api/api_client.dart';
 import 'package:spacex/core/network/api/interceptor/app_interceptor.dart';
 import 'package:spacex/core/network/api/interceptor/logging_interceptor.dart';
 
-
 class DioClient extends ApiClient<Response> {
   DioClient(
     Dio dioC, {

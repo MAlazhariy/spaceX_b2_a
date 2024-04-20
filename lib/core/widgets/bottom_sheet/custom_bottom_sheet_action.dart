@@ -22,7 +22,8 @@ class CustomBottomSheetAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSize.paddingExtraLarge),
+      padding:
+          const EdgeInsets.symmetric(horizontal: AppSize.paddingExtraLarge),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,23 +48,23 @@ class CustomBottomSheetAction extends StatelessWidget {
           // button
           button,
           // cancel
-          if(showCancel)
-          Padding(
-            padding: const EdgeInsets.only(
-              top: AppSize.paddingSmall,
-            ),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'cancel'.tr(),
-                style: context.styleBodyBold.copyWith(
-                  color: kMainColor,
+          if (showCancel)
+            Padding(
+              padding: const EdgeInsets.only(
+                top: AppSize.paddingSmall,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  'cancel'.tr(),
+                  style: context.styleBodyBold.copyWith(
+                    color: kMainColor,
+                  ),
                 ),
               ),
             ),
-          ),
           const SizedBox(height: AppSize.paddingDefault),
         ],
       ),

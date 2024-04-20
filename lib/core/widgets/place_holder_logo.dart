@@ -20,8 +20,8 @@ class PlaceHolderLogo extends StatelessWidget {
       width: width,
       alignment: Alignment.center,
       child: Image.asset(
-      height: 40,
-      color: kBorderNeutralColor,
+        height: 40,
+        color: kBorderNeutralColor,
         fit: BoxFit.contain,
         AppImages.logo,
       ),

@@ -1,4 +1,3 @@
-
 abstract class AppSize {
   // Default
   static const double extraSmall = 5;
@@ -10,14 +9,18 @@ abstract class AppSize {
   // Radius
   static const double radiusExtraSmall = 6;
   static const double radiusSmall = 8;
+
   /// value: 10
   static const double radiusDefault = 10;
+
   /// value: 14
   static const double radiusLarge = 14;
+
   /// value: 40
   static const double radiusExtraLarge = 32;
   static const double radius24 = 24;
   static const double radius40 = 40;
+
   /// value: 46
   static const double radiusMax = 46;
 
