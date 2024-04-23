@@ -18,25 +18,49 @@ void showRocketDetailsDraggableScrollableSheet(
     ),
     clipBehavior: Clip.antiAliasWithSaveLayer,
     context: context,
+    isDismissible: false, // <-- Prevents the bottom sheet from being dismissed by tapping outside
     builder: (BuildContext context) {
       return Container(
         color: Colors.grey,
         padding: const EdgeInsets.all(20.0),
         child: ListView(
+          children: <Widget>[
+            Container(
+              alignment: Alignment.center,
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 30.0),
 
-
-          children: <Widget> [
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 15,),
             Image.network(rocket.image),
-            Text(rocket.name, style: const TextStyle(fontSize: 25,color: Colors.black),),
+            Text(
+              rocket.name,
+              style: const TextStyle(fontSize: 25, color: Colors.black),
+            ),
             Text(
               rocket.description,
-
-              style: const TextStyle(fontSize: 25,color: Colors.black),
+              style: const TextStyle(fontSize: 25, color: Colors.black),
             ),
             if (rocket.cost != null)
               Text(
                 'Cost: \$ ${rocket.cost}',
-                style: const TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                    fontSize: 25,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
               ),
             if (rocket.wikipediaUrl != null)
               ElevatedButton(
@@ -48,8 +72,9 @@ void showRocketDetailsDraggableScrollableSheet(
           ],
         ),
       );
-
     },
   );
+
+
 }
 
