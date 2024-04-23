@@ -1,13 +1,12 @@
 part of 'launches_cubit_cubit.dart';
 
-@freezed
-class LaunchesCubitState with _$LaunchesCubitState {
-  const factory LaunchesCubitState.initial() = _Initial;
+abstract class LaunchesCubitState {}
+
+class LaunchesInit extends LaunchesCubitState {
 }
 
-class LaunchesLoaded extends  LaunchesCubitState {
+class LaunchesLoaded extends LaunchesCubitState {
+  final LaunchModel launchesModel;
 
-final LaunchesModel  launchesModel;
-LaunchesLoaded ( this.launchesModel) ;
-
+  LaunchesLoaded(this.launchesModel);
 }

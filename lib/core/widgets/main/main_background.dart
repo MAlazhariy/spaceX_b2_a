@@ -35,18 +35,8 @@ class MainGalaxyBackground extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-<<<<<<< HEAD
-      ),
-      padding: paddingTop
-          ? EdgeInsets.only(
-              top: MediaQuery.of(context).padding.top,
-            )
-          : null,
-      child: child,
-=======
         if (child != null) child!,
       ],
->>>>>>> ee7acad645ac5f6810409b46302e018230dab57c
     );
   }
 }
