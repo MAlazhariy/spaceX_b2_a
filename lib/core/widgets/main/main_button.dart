@@ -58,7 +58,8 @@ class MainButton extends StatelessWidget {
                 : _activated
                     ? color
                     : kBorderNeutralColor,
-            borderRadius: BorderRadius.circular(stadiumBorder ? 100 : AppSize.radiusDefault),
+            borderRadius: BorderRadius.circular(
+                stadiumBorder ? 100 : AppSize.radiusDefault),
             border: outlined
                 ? Border.all(
                     color: _activated ? color : kBorderNeutralColor,

@@ -28,7 +28,8 @@ void main() async {
 
   // set system app bar style
   SystemChrome.setSystemUIOverlayStyle(kSystemOverlayStyle);
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
   runApp(
     MultiBlocProvider(

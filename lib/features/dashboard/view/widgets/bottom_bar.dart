@@ -82,7 +82,9 @@ class CustomBottomBar extends StatelessWidget {
             child: Row(
               /// Using a different alignment when there are 2 items or less
               /// so it behaves the same as BottomNavigationBar.
-              mainAxisAlignment: items.length <= 2 ? MainAxisAlignment.spaceEvenly : MainAxisAlignment.spaceAround,
+              mainAxisAlignment: items.length <= 2
+                  ? MainAxisAlignment.spaceEvenly
+                  : MainAxisAlignment.spaceAround,
               children: List.generate(
                 items.length,
                 (index) {
@@ -112,10 +114,13 @@ class CustomBottomBar extends StatelessWidget {
                             // icon
                             IconTheme(
                               data: IconThemeData(
-                                color: Color.lerp(unselectedColor, selectedColor, t),
+                                color: Color.lerp(
+                                    unselectedColor, selectedColor, t),
                                 size: 24,
                               ),
-                              child: isSelected ? item.activeIcon ?? item.icon : item.icon,
+                              child: isSelected
+                                  ? item.activeIcon ?? item.icon
+                                  : item.icon,
                             ),
                             ClipRect(
                               clipBehavior: Clip.antiAlias,

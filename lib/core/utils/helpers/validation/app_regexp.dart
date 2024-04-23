@@ -6,10 +6,10 @@ class AppRegExp {
     return RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(email);
     // return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/-=?^_`{|}~]+@[a-zA-Z0-9-]+\.[a-zA-Z]+").hasMatch(email);
   }
+
   static bool isNameValid(String name) {
     return RegExp(r"^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$").hasMatch(name);
   }
-
 
   static bool isPhoneNumberValid(String phoneNumber) {
     return RegExp(r"^(?:[+])?[0-9]{10}$").hasMatch(phoneNumber);
@@ -18,7 +18,6 @@ class AppRegExp {
   static bool isOTPValid(String otp) {
     return RegExp(r"^[0-9]{6}$").hasMatch(otp);
   }
-
 
   static bool isPasswordValid(String password) {
     return _hasLowerCase(password) &&

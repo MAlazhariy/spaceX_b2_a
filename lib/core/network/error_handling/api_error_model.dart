@@ -18,7 +18,7 @@ class ApiErrorModel extends Equatable {
 
   @override
   List<Object?> get props => [
-    message,
-    code,
-  ];
+        message,
+        code,
+      ];
 }
