@@ -1,8 +1,11 @@
+import 'package:dio/dio.dart';
+import 'package:spacex/core/constants.dart';
+
 class LaunchesWebServices {
 
   Dio dio = Dio(
     BaseOptions(
-      baseUrl: BaseUrl_Laaunches,
+      baseUrl: AppConstants.BASE_URL,
       receiveDataWhenStatusError: true,
       connectTimeout: Duration(milliseconds: 30000),
       receiveTimeout: Duration(milliseconds: 30000),

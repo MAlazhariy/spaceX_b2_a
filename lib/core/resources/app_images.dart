@@ -6,8 +6,6 @@ class AppImages {
   static const String arFlag = "$_baseImagePath/ar.png";
   static const String enFlag = "$_baseImagePath/en.png";
 }
-<<<<<<< HEAD
-=======
 
 class AppLottie {
   static const String _baseLottiePath = "assets/lottie";
@@ -20,4 +18,3 @@ class AppLottie {
   static const String circlesPlanetLoading = "$_baseLottiePath/circles_planet_loading.json";
   static const String astronautNoInternet = "$_baseLottiePath/astro_no_internet.json";
 }
->>>>>>> ee7acad645ac5f6810409b46302e018230dab57c
