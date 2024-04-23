@@ -1,15 +1,16 @@
+import 'package:spacex/features/launches/data/model/launch_model.dart';
+import 'package:spacex/features/launches/data/web_services/launchesWebservices.dart';
+
 class LaunchesRepository {
+  final LaunchesWebServices launchesWebServices;
 
+  LaunchesRepository({
+    required this.launchesWebServices,
+  });
 
-final LaunchesWebServices  launchesWebServices;
+  Future<LaunchModel> getAllLaunches() async {
+    final launchesJson = await launchesWebServices.getAllLaunches();
 
-LaunchesRepository({@required this.launchesWebServices});
-
-Future<LaunchesModel> getAllLaunches() async{
-  
-final LaunchesJson = await  launchesWebServices.getLauncesData();
-
-return  LaunchesModel.fromJson((LaunchesJson));
+    return LaunchModel.fromJson((launchesJson));
+  }
 }
-}
-

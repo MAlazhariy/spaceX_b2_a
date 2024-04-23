@@ -1,11 +1,11 @@
 
-class LaunchesModel {
+class LaunchModel {
   Info? info;
   List<Results>? results;
 
-  LaunchesModel({this.info, this.results});
+  LaunchModel({this.info, this.results});
 
-  LaunchesModel.fromJson(Map<String, dynamic> json) {
+  LaunchModel.fromJson(Map<String, dynamic> json) {
     if(json["info"] is Map) {
       info = json["info"] == null ? null : Info.fromJson(json["info"]);
     }
@@ -15,14 +15,14 @@ class LaunchesModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
+    final Map<String, dynamic> data = <String, dynamic>{};
     if(info != null) {
-      _data["info"] = info?.toJson();
+      data["info"] = info?.toJson();
     }
     if(results != null) {
-      _data["results"] = results?.map((e) => e.toJson()).toList();
+      data["results"] = results?.map((e) => e.toJson()).toList();
     }
-    return _data;
+    return data;
   }
 }
 
@@ -82,26 +82,26 @@ class Results {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["id"] = id;
-    _data["name"] = name;
-    _data["status"] = status;
-    _data["species"] = species;
-    _data["type"] = type;
-    _data["gender"] = gender;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["id"] = id;
+    data["name"] = name;
+    data["status"] = status;
+    data["species"] = species;
+    data["type"] = type;
+    data["gender"] = gender;
     if(origin != null) {
-      _data["origin"] = origin?.toJson();
+      data["origin"] = origin?.toJson();
     }
     if(location != null) {
-      _data["location"] = location?.toJson();
+      data["location"] = location?.toJson();
     }
-    _data["image"] = image;
+    data["image"] = image;
     if(episode != null) {
-      _data["episode"] = episode;
+      data["episode"] = episode;
     }
-    _data["url"] = url;
-    _data["created"] = created;
-    return _data;
+    data["url"] = url;
+    data["created"] = created;
+    return data;
   }
 }
 
@@ -121,10 +121,10 @@ class Location {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["name"] = name;
-    _data["url"] = url;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["name"] = name;
+    data["url"] = url;
+    return data;
   }
 }
 
@@ -144,10 +144,10 @@ class Origin {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["name"] = name;
-    _data["url"] = url;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["name"] = name;
+    data["url"] = url;
+    return data;
   }
 }
 
@@ -173,11 +173,11 @@ class Info {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["count"] = count;
-    _data["pages"] = pages;
-    _data["next"] = next;
-    _data["prev"] = prev;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["count"] = count;
+    data["pages"] = pages;
+    data["next"] = next;
+    data["prev"] = prev;
+    return data;
   }
 }
