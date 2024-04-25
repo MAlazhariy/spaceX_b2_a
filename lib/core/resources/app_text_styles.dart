@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:spacex/core/resources/app_colors.dart';
 import 'package:spacex/core/resources/app_size.dart';
+
+// todo: delete unused styles
 // medium - 3
 const kMediumFontStyle = TextStyle(
   fontSize: AppSize.fontDefault,

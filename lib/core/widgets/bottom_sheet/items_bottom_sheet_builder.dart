@@ -28,10 +28,12 @@ class ItemsBottomSheetBuilder<T> extends StatefulWidget {
   final String Function(T value) selectedItemTitle;
 
   @override
-  State<ItemsBottomSheetBuilder<T>> createState() => _ItemsBottomSheetBuilderState<T>();
+  State<ItemsBottomSheetBuilder<T>> createState() =>
+      _ItemsBottomSheetBuilderState<T>();
 }
 
-class _ItemsBottomSheetBuilderState<T> extends State<ItemsBottomSheetBuilder<T>> {
+class _ItemsBottomSheetBuilderState<T>
+    extends State<ItemsBottomSheetBuilder<T>> {
   late T? _selected = widget.initSelection;
   late ScrollController _scrollController;
   final _itemExtent = 50.0;
@@ -46,7 +48,8 @@ class _ItemsBottomSheetBuilderState<T> extends State<ItemsBottomSheetBuilder<T>>
   }
 
   void _scrollToSelectedItem() {
-    final selectedIndex = _selected != null ? widget.items.indexOf(_selected as T) : -1;
+    final selectedIndex =
+        _selected != null ? widget.items.indexOf(_selected as T) : -1;
     final index = selectedIndex != -1 ? selectedIndex : 2.5;
     final offset = index * _itemExtent;
     _scrollController.animateTo(
@@ -109,8 +112,11 @@ class _ItemsBottomSheetBuilderState<T> extends State<ItemsBottomSheetBuilder<T>>
                         widget.selectedItemTitle(e),
                         textDirection: TextDirection.ltr,
                         style: context.styleHeader2.copyWith(
-                          fontSize: isSelected ? AppSize.fontDefault + 1 : AppSize.fontDefault - 1,
-                          color: kTitleHeadColor.withOpacity(isSelected ? 1 : 0.5),
+                          fontSize: isSelected
+                              ? AppSize.fontDefault + 1
+                              : AppSize.fontDefault - 1,
+                          color:
+                              kTitleHeadColor.withOpacity(isSelected ? 1 : 0.5),
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,

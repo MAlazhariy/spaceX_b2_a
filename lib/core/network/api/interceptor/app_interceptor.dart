@@ -10,7 +10,6 @@ import 'package:easy_localization/easy_localization.dart';
 // import 'package:spacex/core/utils/extensions/response_extension.dart';
 // import 'package:spacex/features/auth/bloc/auth_bloc/auth_bloc.dart';
 
-
 class AppInterceptor extends Interceptor {
   // final BaseLoginLocalDataSource loginLocalDataSource;
   // final Dio dio;

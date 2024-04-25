@@ -18,7 +18,8 @@ final sl = GetIt.instance;
 abstract class DI {
   static Future<void> init() async {
     // base
-    sl.registerLazySingleton<ApiClient<Response>>(() => DioClient(sl(), sharedPreferences: sl(), appInterceptor: sl()));
+    sl.registerLazySingleton<ApiClient<Response>>(
+        () => DioClient(sl(), sharedPreferences: sl(), appInterceptor: sl()));
 
     // data source
     sl.registerLazySingleton<BaseLaunchRemoteDataSource>(() => LaunchRemoteDataSource(sl()));

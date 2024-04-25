@@ -8,6 +8,7 @@ const kPrimaryLightColor = Color(0xffFAF7FF);
 // Text Colors
 const kPrimaryTitleColor = Color(0xffffffff);
 const kTitleBodyColor = Color(0xfffafafc);
+const kTitleDarkColor = Color(0xff212121);
 const kTitleHeadColor = Color(0xffebebf2);
 const kTitleHintColor = Color(0xff3d3d3d);
 const kSubtitleColor = Color(0xffd8d8f0);
@@ -29,7 +30,6 @@ const kSkyBackgroundColor = Color(0xff08071a);
 // Shimmer Colors
 final shimmerBaseColor = kLightGreyColor.withOpacity(0.23);
 final shimmerHighlightColor = kLightGreyColor.withOpacity(0.50);
-
 
 // System Colors
 const kRedColor = Color(0xFFFF5C68);

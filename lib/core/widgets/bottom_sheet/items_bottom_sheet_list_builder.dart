@@ -28,10 +28,12 @@ class ItemsBottomSheetListBuilder<T> extends StatefulWidget {
   final String Function(T value) selectedItemTitle;
 
   @override
-  State<ItemsBottomSheetListBuilder<T>> createState() => _ItemsBottomSheetListBuilderState<T>();
+  State<ItemsBottomSheetListBuilder<T>> createState() =>
+      _ItemsBottomSheetListBuilderState<T>();
 }
 
-class _ItemsBottomSheetListBuilderState<T> extends State<ItemsBottomSheetListBuilder<T>> {
+class _ItemsBottomSheetListBuilderState<T>
+    extends State<ItemsBottomSheetListBuilder<T>> {
   late T? _selected = widget.initSelection;
   late ScrollController _scrollController;
   final _itemExtent = 50.0;
@@ -46,7 +48,8 @@ class _ItemsBottomSheetListBuilderState<T> extends State<ItemsBottomSheetListBui
   }
 
   void _scrollToSelectedItem() {
-    final selectedIndex = _selected != null ? widget.items.indexOf(_selected as T) : -1;
+    final selectedIndex =
+        _selected != null ? widget.items.indexOf(_selected as T) : -1;
     final index = selectedIndex != -1 ? selectedIndex : 2.5;
     final offset = index * _itemExtent;
     _scrollController.animateTo(
@@ -84,7 +87,7 @@ class _ItemsBottomSheetListBuilderState<T> extends State<ItemsBottomSheetListBui
                 controller: _scrollController,
                 itemExtent: _itemExtent,
                 itemCount: widget.items.length,
-                itemBuilder: (context, index){
+                itemBuilder: (context, index) {
                   final item = widget.items[index];
                   final isSelected = item == _selected;
                   return GestureDetector(
@@ -111,8 +114,11 @@ class _ItemsBottomSheetListBuilderState<T> extends State<ItemsBottomSheetListBui
                         widget.selectedItemTitle(item),
                         textDirection: TextDirection.ltr,
                         style: context.styleHeader2.copyWith(
-                          fontSize: isSelected ? AppSize.fontDefault + 1 : AppSize.fontDefault - 1,
-                          color: kTitleHeadColor.withOpacity(isSelected ? 1 : 0.5),
+                          fontSize: isSelected
+                              ? AppSize.fontDefault + 1
+                              : AppSize.fontDefault - 1,
+                          color:
+                              kTitleHeadColor.withOpacity(isSelected ? 1 : 0.5),
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,

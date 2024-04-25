@@ -55,7 +55,8 @@ abstract class ApiErrorHandler {
             case 404:
             case 500:
             case 503:
-              return ApiErrorModel("${error.response!.statusCode}: ${error.response!.statusMessage ?? "error_occurred".tr()}");
+              return ApiErrorModel(
+                  "${error.response!.statusCode}: ${error.response!.statusMessage ?? "error_occurred".tr()}");
 
             default:
               ApiErrorModel? errorResponse;
@@ -69,7 +70,8 @@ abstract class ApiErrorHandler {
               debugPrint('--- error message: ${error.response?.statusMessage}');
 
               if (errorResponse == null) {
-                return ApiErrorModel("${error.response?.statusCode}: ${"error_occurred".tr()}");
+                return ApiErrorModel(
+                    "${error.response?.statusCode}: ${"error_occurred".tr()}");
               } else {
                 return errorResponse;
               }

@@ -21,7 +21,7 @@ class MainGalaxyBackground extends StatelessWidget {
         Container(
           height: double.infinity,
           width: double.infinity,
-          margin: paddingTop || true
+          margin: paddingTop
               ? EdgeInsets.only(
                   top: MediaQuery.of(context).padding.top,
                 )

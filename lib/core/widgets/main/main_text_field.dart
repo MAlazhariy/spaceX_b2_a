@@ -83,7 +83,8 @@ class _MainTextFieldState extends State<MainTextField> {
       ),
       textAlign: TextAlign.start,
       decoration: InputDecoration(
-        prefixIcon: (widget.prefixIcon != null ? Icon(widget.prefixIcon) : null),
+        prefixIcon:
+            (widget.prefixIcon != null ? Icon(widget.prefixIcon) : null),
         prefix: widget.prefix,
         errorText: widget.errorText,
         errorMaxLines: 2,
