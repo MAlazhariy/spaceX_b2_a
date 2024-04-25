@@ -17,10 +17,12 @@ class RocketListView extends StatelessWidget {
 
           return GestureDetector(
             onTap: () {
-              showRocketDetailsBottomSheet(
-                context,
-                rocket: rocket,
-              );
+              // showRocketDetailsBottomSheet(
+              //   context,
+              //   rocket: rocket,
+              // );
+
+              showRocketDetailsDraggableScrollableSheet(context, rocket: rocket);
             },
             child: Card(
               margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
