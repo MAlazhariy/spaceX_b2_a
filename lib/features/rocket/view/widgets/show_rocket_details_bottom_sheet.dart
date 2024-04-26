@@ -6,52 +6,75 @@ import 'package:url_launcher/url_launcher.dart';
 // https://github.com/dart-lang/sdk/issues/42710#issuecomment-1328246797
 import '../../data/model/rocket_model.dart';
 
-void showRocketDetailsBottomSheet(
-  BuildContext context, {
-  required RocketModel rocket,
-}) {
+void showRocketDetailsDraggableScrollableSheet(
+    BuildContext context, {
+      required RocketModel rocket,
+    })
+{
+
   showModalBottomSheet<void>(
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+    ),
+    clipBehavior: Clip.antiAliasWithSaveLayer,
     context: context,
+    isDismissible: false, // <-- Prevents the bottom sheet from being dismissed by tapping outside
     builder: (BuildContext context) {
-      return GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTap: () {
-          Navigator.pop(context);
-        },
-        child: SizedBox(
-          height: 1300,
-          child: ListView(
-            children: <Widget>[
-              Image.network(rocket.image),
-              Text(rocket.name),
-              Text(
-                rocket.description,
-                style: const TextStyle(fontSize: 25, color: Colors.black),
-              ),
-              if (rocket.cost != null)
-                Text(
-                  'Cost: \$ ${rocket.cost}',
-                  style: const TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
-                ),
-              if (rocket.wikipediaUrl != null)
-                GestureDetector(
-                  // not working for some reason
-                  onTap: () {
-                    launchUrl(rocket.wikipediaUrl as Uri);
-                  },
-                  child: Text(
-                    rocket.wikipediaUrl!,
-                    style: const TextStyle(
-                      fontSize: 25,
-                      decoration: TextDecoration.underline,
-                      color: Colors.blue,
-                    ),
+      return Container(
+        color: Colors.grey,
+        padding: const EdgeInsets.all(20.0),
+        child: ListView(
+          children: <Widget>[
+            Container(
+              alignment: Alignment.center,
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 30.0),
+
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(2),
                   ),
                 ),
-            ],
-          ),
+              ),
+            ),
+            const SizedBox(height: 15,),
+            Image.network(rocket.image),
+            Text(
+              rocket.name,
+              style: const TextStyle(fontSize: 25, color: Colors.black),
+            ),
+            Text(
+              rocket.description,
+              style: const TextStyle(fontSize: 25, color: Colors.black),
+            ),
+            if (rocket.cost != null)
+              Text(
+                'Cost: \$ ${rocket.cost}',
+                style: const TextStyle(
+                    fontSize: 25,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+            if (rocket.wikipediaUrl != null)
+              ElevatedButton(
+                onPressed: () {
+                  launchUrl(Uri.parse(rocket.wikipediaUrl!));
+                },
+                child: const Text('Wikipedia'),
+              ),
+          ],
         ),
       );
     },
   );
+
+
 }
+
