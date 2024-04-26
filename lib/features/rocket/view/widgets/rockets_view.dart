@@ -20,7 +20,9 @@ class _RocketsViewState extends State<RocketsView> {
   @override
   void initState() {
     super.initState();
-    // todo: not best practice
+    // todo: zak - not best practice
+    // todo: zak - this way gets the rockets each time the widget created!
+    // you should get the rockets when create the cubit .. or make function to get rockets if not exists
     rockets = BlocProvider.of<RocketsCubit>(context).getRockets();
   }
 
@@ -28,7 +30,6 @@ class _RocketsViewState extends State<RocketsView> {
   Widget build(BuildContext context) {
     return BlocBuilder<RocketsCubit, RocketsState>(
       builder: (context, state) {
-        // todo: zak - should handle error case
         if (state is RocketsLoading) {
           return const MainCircularProgress();
         } else if (state is RocketsLoaded) {
@@ -40,6 +41,5 @@ class _RocketsViewState extends State<RocketsView> {
         return const Center(child: Text('Error occurred!'));
       },
     );
-    ;
   }
 }

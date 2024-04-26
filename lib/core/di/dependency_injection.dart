@@ -1,6 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:spacex/features/capsules/data/data_source/capsule_remote_data_source.dart';
+import 'package:spacex/features/capsules/data/repository/capsule_repository.dart';
+import 'package:spacex/features/capsules/logic/capsule_bloc.dart';
 import 'package:spacex/features/dashboard/view/cubit/dashboard_cubit.dart';
 import 'package:spacex/features/rocket/rockets_api_service.dart';
 import 'package:spacex/core/network/api/api_client.dart';
@@ -23,9 +26,11 @@ abstract class DI {
 
     // data source
     sl.registerLazySingleton<BaseLaunchRemoteDataSource>(() => LaunchRemoteDataSource(sl()));
+    sl.registerLazySingleton<BaseCapsuleRemoteDataSource>(() => CapsuleRemoteDataSource(sl()));
 
     // repository
     sl.registerLazySingleton<BaseLaunchRepository>(() => LaunchRepository(sl()));
+    sl.registerLazySingleton<BaseCapsuleRepository>(() => CapsuleRepository(sl()));
 
     // custom
     sl.registerLazySingleton<RocketsApiService>(() => RocketsApiService(sl()));
@@ -36,6 +41,7 @@ abstract class DI {
     // sl.registerFactory(() => HomeBloc());
     sl.registerFactory(() => RocketsCubit(sl()));
     sl.registerFactory(() => LaunchBloc(sl()));
+    sl.registerFactory(() => CapsuleBloc(sl()));
 
     // External
     final sharedPreferences = await SharedPreferences.getInstance();
