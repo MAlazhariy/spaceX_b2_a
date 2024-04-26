@@ -54,6 +54,32 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    // Flavors
+    flavorDimensions "app"
+
+    productFlavors {
+        dev {
+            dimension "app"
+            resValue "string", "app_name", "Dev SpaceX"
+            applicationIdSuffix ".dev"
+        }
+        production {
+            dimension "app"
+            resValue "string", "app_name", "SpaceX"
+            applicationIdSuffix ".prod"
+        }
+    }
+
+    sourceSets {
+        dev {
+            res.srcDirs = ['src/dev/res']
+        }
+        production {
+            res.srcDirs = ['src/production/res']
+        }
+    }
+
 }
 
 flutter {
@@ -62,19 +88,4 @@ flutter {
 
 dependencies {
 //    implementation 'androidx.multidex:multidex:2.0.1'
-}
-
-flavorDimensions "app"
-
-productFlavors {
-    dev {
-        dimension "app"
-        resValue "string", "app_name", "Dev SpaceX"
-        applicationIdSuffix ".dev"
-    }
-    production {
-        dimension "app"
-        resValue "string", "app_name", "SpaceX"
-        applicationIdSuffix ".prod"
-    }
 }

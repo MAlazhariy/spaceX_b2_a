@@ -30,13 +30,12 @@ void main() async {
 
   // set system app bar style
   SystemChrome.setSystemUIOverlayStyle(kSystemOverlayStyle);
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
   final appConfig = AppConfig(
-    appEnvironment: AppEnvironment.production,
-    appName: AppConstants.APP_NAME,
-    description: 'This is a production version of SpaceX app',
+    appEnvironment: AppEnvironment.dev,
+    appName: 'SpaceX development',
+    description: 'This is a development version of SpaceX app',
     baseUrl: AppConstants.BASE_URL,
     child: MultiBlocProvider(
       providers: [

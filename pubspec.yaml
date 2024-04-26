@@ -40,6 +40,7 @@ dependencies:
   slide_countdown: ^1.6.1
   connection_wrapper:
     path: packages/connection_checker
+  draggable_bottom_sheet: ^1.0.2
 
 dev_dependencies:
   flutter_test:
