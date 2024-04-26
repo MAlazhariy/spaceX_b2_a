@@ -30,7 +30,6 @@ class _MyAppState extends State<MyApp> {
         navigatorKey: navigatorKey,
         theme: AppThemes.dark,
         debugShowCheckedModeBanner: false,
-        // localization
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
